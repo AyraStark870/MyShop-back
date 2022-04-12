@@ -12,7 +12,6 @@ const { createUser, login } = require("../controllers/userControllers");
 router.post(
   "/new",
   [
-    //  check("fullName", "full name is required").not().isEmpty(),
     check("email", "email is required").isEmail(),
     check("password", "password must have more than 5 characters").isLength({
       min: 5,
